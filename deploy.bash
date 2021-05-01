@@ -19,7 +19,7 @@ cd ~
 git clone https://github.com/myashtree/haven.git
 sudo systemctl enable ntp
 cd /usr/local/src
-sudo git clone https://github.com/haven-protocol-org/haven.git
+sudo git clone https://github.com/monero-project/monero.git haven
 cd haven
 USE_SINGLE_BUILDDIR=1 sudo --preserve-env=USE_SINGLE_BUILDDIR make -j$(nproc) release || USE_SINGLE_BUILDDIR=1 sudo --preserve-env=USE_SINGLE_BUILDDIR make release || exit 0
 sudo cp ~/nodejs-pool/deployment/haven.service /lib/systemd/system/

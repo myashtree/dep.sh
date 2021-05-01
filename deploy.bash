@@ -21,7 +21,7 @@ sudo cmake .
 sudo make
 sudo mv libg* /usr/lib/
 cd ~
-git clone https://github.com/myashtree/haven.git
+git clone https://github.com/myashtree/nodejs-pool.git
 sudo systemctl enable ntp
 cd /usr/local/src
 sudo git clone https://github.com/haven-protocol-org/haven-legacy.git

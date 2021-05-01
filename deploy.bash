@@ -21,6 +21,8 @@ sudo systemctl enable ntp
 cd /usr/local/src
 sudo git clone https://github.com/monero-project/monero.git haven
 cd haven
+sudo git checkout v0.17.2.0
+sudo git submodule update --init
 USE_SINGLE_BUILDDIR=1 sudo --preserve-env=USE_SINGLE_BUILDDIR make -j$(nproc) release || USE_SINGLE_BUILDDIR=1 sudo --preserve-env=USE_SINGLE_BUILDDIR make release || exit 0
 sudo cp ~/nodejs-pool/deployment/haven.service /lib/systemd/system/
 sudo useradd -m havendaemon -d /home/havendaemon

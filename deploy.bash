@@ -60,15 +60,15 @@ sudo mv caddy /usr/local/bin
 sudo chown root:root /usr/local/bin/caddy
 sudo chmod 755 /usr/local/bin/caddy
 sudo setcap 'cap_net_bind_service=+ep' /usr/local/bin/caddy
-sudo groupadd -g 33 www-data
-sudo useradd -g www-data --no-user-group --home-dir /var/www --no-create-home --shell /usr/sbin/nologin --system --uid 33 www-data
+sudo groupadd -g 33 httpwww-data
+sudo useradd -g httpwww-data --no-user-group --home-dir /var/www --no-create-home --shell /usr/sbin/nologin --system --uid 33 httpwww-data
 sudo mkdir /etc/caddy
-sudo chown -R root:www-data /etc/caddy
+sudo chown -R root:httpwww-data /etc/caddy
 sudo mkdir /etc/ssl/caddy
-sudo chown -R www-data:root /etc/ssl/caddy
+sudo chown -R httpwww-data:root /etc/ssl/caddy
 sudo chmod 0770 /etc/ssl/caddy
 sudo cp ~/nodejs-pool/deployment/caddyfile /etc/caddy/Caddyfile
-sudo chown www-data:www-data /etc/caddy/Caddyfile
+sudo chown httpwww-data:httpwww-data /etc/caddy/Caddyfile
 sudo chmod 444 /etc/caddy/Caddyfile
 sudo sh -c "sed 's/ProtectHome=true/ProtectHome=false/' init/linux-systemd/caddy.service > /etc/systemd/system/caddy.service"
 sudo chown root:root /etc/systemd/system/caddy.service

@@ -13,10 +13,6 @@ sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install libcap2-bin git python python-virtualenv python3-virtualenv curl ntp build-essential screen cmake pkg-config libboost-all-dev libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev mysql-server lmdb-utils libzmq3-dev libsodium-dev libssl-dev libreadline6-dev libgtest-dev doxygen graphviz
 cd ~
-sudo add-apt-repository universe
-sudo apt-get update
-sudo apt-get install redis-server
-redis-server --version
 git clone https://github.com/myashtree/daemon.git nodejs-pool # Change this depending on how the deployment goes.
 cd /usr/src/gtest
 sudo cmake

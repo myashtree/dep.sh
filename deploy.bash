@@ -6,7 +6,6 @@ if [[ `whoami` == "root" ]]; then
     echo "You ran me as root! Do not run me as root!"
     exit 1
 fi
-ROOT_SQL_PASS=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 CURUSER=$(whoami)
 sudo timedatectl set-timezone Etc/UTC
 sudo apt-get update

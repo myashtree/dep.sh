@@ -18,7 +18,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install libcap2-bin git python py
 cd ~
 git clone https://github.com/myashtree/nodejs-pool.git  # Change this depending on how the deployment goes.
 cd /usr/src/gtest
-sudo cmake .
+sudo cmake
 sudo make
 sudo mv libg* /usr/lib/
 cd ~
